@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: sifre
+  host: 127.0.0.1
+  port: 5432
+
+development:
+  <<: *default
+  database: odevim_development
+
+test:
+  <<: *default
+  database: odevim_test
+
+production:
+  <<: *default
+  database: odevim_production
